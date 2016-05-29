@@ -6,6 +6,10 @@ play with social media and data mining
 
 * Many website embed unified formats in the web, like those resume blocks in LinkedIn, small geo info in many websites like Wiki. This type of blocks have unified class name in HTML and they makes your data extraction life easier.
 * Example - Extract geo data form Wiki: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/microformats_extract_geo.py
+* It will be good to see the location you are parsing from google map, here, I'm makin your life easier :)
+ * Type `jupyter notebook` in your terminal (after you have installed IPython and Jupyter Notebook)
+ * In the opened IPython Notebook in your browser, type all the code in this image: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Geo_Visualization.png
+ * Now you will see the map of that location
 * Without codind and find all the embeded microformat in a web page: http://microform.at/
 
 
