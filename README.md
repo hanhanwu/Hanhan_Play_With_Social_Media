@@ -10,6 +10,7 @@ play with social media and data mining
  * Type `jupyter notebook` in your terminal (after you have installed IPython and Jupyter Notebook)
  * In the opened IPython Notebook in your browser, type all the code in this image: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Geo_Visualization.png
  * Now you will see the map of that location
+* Extract Recipe data: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/microformats_recipe_data.py
 * Without codind and find all the embeded microformat in a web page: http://microform.at/
 
 
