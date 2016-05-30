@@ -12,7 +12,7 @@ import json
 
 
 def main():
-    foodie_url = "http://bbq.about.com/od/hamburgerrecipes/r/ble30902c.htm"
+    foodie_url = "http://britishfood.about.com/od/recipeindex/r/applepie.htm"
     
     try:
         foodie_page = urllib2.urlopen(foodie_url)
@@ -31,8 +31,8 @@ def main():
     for s in food_preparation_tag.findAll(text=True):
         if s.strip() != '':
             s = s.lstrip().rstrip()
-            if s.lower() == 'preparation': continue
-            preparation.append(unicodedata.normalize("NFKD", s))
+            if s.lower() == 'preparation' or s.lower() == 'method': continue
+            preparation.append(unicodedata.normalize("NFKD", s).encode('ascii','ignore'))
             
     
     
@@ -42,7 +42,7 @@ def main():
             s = s.lstrip().rstrip()
             if s.lower() == 'ingredients': continue
             if s == 'Add to shopping list': break
-            ingredients.append(unicodedata.normalize("NFKD", s))
+            ingredients.append(unicodedata.normalize("NFKD", s).encode('ascii','ignore'))
     
     recipe['Ingredients'] = ingredients
     recipe['Instruction'] = preparation
