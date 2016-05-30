@@ -11,9 +11,11 @@ play with social media and data mining
  * In the opened IPython Notebook in your browser, type all the code in this image: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Geo_Visualization.png
  * Now you will see the map of that location
 * Without codind and find all the embeded microformat in a web page: http://microform.at/
+
+* RDF (Resource Description Framework) - the semantic web's model for defining and enabling exchange of triples (subject, predicate and object of the sentence) 
 * <b>FuXi</b> - A powerful logic-reasoning system for the semantic web that uses a technique called Forward Chaining to deduce new information form existing info by starting with s aet of facts, deriving new facts from the knows facts by applying a set of logical rules, and repeating this process till a particular can be approved or diapproved, or there is no more fact to derive.  https://code.google.com/archive/p/fuxi/wikis/Installation_Testing.wiki
 * N3 - Simple but powerful syntex that expresses facts and ruels in RDF, FuXi is also using it. https://www.w3.org/DesignIssues/Notation3
-* RDF (Resource Description Framework) - the semantic web's model for defining and enabling exchange of triples (subject, predicate and object of the sentence) 
+
 
 * Extract Recipe data: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/microformats_recipe_data.py
 
