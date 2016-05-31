@@ -20,6 +20,13 @@ play with social media and data mining
 * Extract Recipe data: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/microformats_recipe_data.py
 
 
+*********************************************
+
+Twitter Mining
+
+1. Create a twitter app and get CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET: https://apps.twitter.com/
+2. A convenient way to get your own twitter data: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/twitter_oauth1.0.py
+
 
 *********************************************
 
