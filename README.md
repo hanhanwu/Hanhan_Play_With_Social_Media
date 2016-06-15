@@ -32,7 +32,10 @@ play with social media and data mining
 
 <b>Reddit Mining</b>
 
-
+* Topic Modeling
+ * About Spark LDA: https://databricks.com/blog/2015/03/25/topic-modeling-with-lda-mllib-meets-graphx.html
+ * Spark LDA MLlib sample code: http://spark.apache.org/docs/latest/mllib-clustering.html#latent-dirichlet-allocation-lda
+ * scikit-learn NMF smaple Python code: http://scikit-learn.org/stable/auto_examples/applications/topics_extraction_with_nmf_lda.html
 
 *********************************************
 
