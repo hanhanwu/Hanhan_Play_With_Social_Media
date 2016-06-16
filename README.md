@@ -36,7 +36,9 @@ play with social media and data mining
  * About Spark LDA: https://databricks.com/blog/2015/03/25/topic-modeling-with-lda-mllib-meets-graphx.html
  * Spark LDA MLlib description: http://spark.apache.org/docs/latest/mllib-clustering.html#latent-dirichlet-allocation-lda
  * Spark LDA sample Python code: http://spark.apache.org/docs/latest/api/python/pyspark.mllib.html#pyspark.mllib.clustering.LDA
- * Spark LDA Model sample Python code: http://spark.apache.org/docs/latest/api/python/pyspark.mllib.html#pyspark.mllib.clustering.LDAModel
+ * Spark DistributedLDAModel (it has `topDocumentsPerTopic()`, `topTopicsPerDocument()`, `topicDistributions`): http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.clustering.DistributedLDAModel
+ * DistributedLDAModel Scala code: <a>http://stackoverflow.com/questions/33072449/extract-document-topic-matrix-from-pyspark-lda-model</a>
+ <a>http://spark.apache.org/docs/latest/mllib-clustering.html#latent-dirichlet-allocation-lda</a>
  * scikit-learn NMF smaple Python code: http://scikit-learn.org/stable/auto_examples/applications/topics_extraction_with_nmf_lda.html
  
 * Entity/Composition Extraction
