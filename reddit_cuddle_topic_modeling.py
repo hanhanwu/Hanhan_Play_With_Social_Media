@@ -1,35 +1,73 @@
+'''
+I am using Spark cloud, some features here can only be used in the Python Notebook in Spark
+'''
+
+# cell 1
+import sys  
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
+
+# cell 2
 import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
 nltk.download('maxent_treebank_pos_tagger')
 nltk.download('averaged_perceptron_tagger')
+
+
+# cell 3
 import praw
-from nltk.stem.porter import *
 import re
 
-
-user_agent = ("[your user agent]")    # change this to your user agent
+user_agent = ("[use your own user agent]")
 r = praw.Reddit(user_agent = user_agent)
 # USask_Cuddle_Buddies will serve as outliers
 # subreddit_lst = ["cuddle_with_me", "Cuddles", "cuddlebuddies", "USask_Cuddle_Buddies"]
+
 subreddit_lst = ["cuddlebuddies"]
 reddit_prefix = "https://www.reddit.com/r/"
 
-limit_num = 5
-stemmer = PorterStemmer()
-stopwords = nltk.corpus.stopwords.words('english')
+limit_num = 1000
 
 posts = {}
 
 for st in subreddit_lst:
   subreddit = r.get_subreddit(st)
   url_prefix = reddit_prefix+st+"/"
+  # use hot topics first
   for s in subreddit.get_hot(limit = limit_num):
     sid = s.id
     posts[sid] = {}
     posts[sid]["title"] = s.title
-    posts[sid]["text"] = s.title+' '+s.selftext
-    posts[sid]["score"] = s.score
-    posts[sid]["comments_num"] = s.num_comments
-    posts[sid]["url"] = url_prefix+sid
+    posts[sid]["text"] = s.selftext
+    
 print len(posts.keys())
+
+
+# cell 4
+from nltk.stem.porter import *
+import string
+import unicodedata
+
+stopwords = nltk.corpus.stopwords.words('english')
+lst_has_title = []
+lst_has_no_title = []
+
+for v in posts.values():
+  lst_has_title.append(v['title'] + ' ' + v['text'])
+  lst_has_no_title.append(v['text'])
+
+title_text_rdd = sc.parallelize(lst_has_title)
+text_only_rdd = sc.parallelize(lst_has_no_title)
+
+def clean_review(review_line):
+  replace_punctuation = string.maketrans(string.punctuation, ' '*len(string.punctuation))
+  review_text = unicodedata.normalize("NFKD", review_line).encode('ascii','ignore').translate(replace_punctuation).split()
+  review_words = [w.lower() for w in review_text if w not in stopwords]
+
+  return review_words
+
+all_words1 = title_text_rdd.map(clean_review)  # title_text, each element in RDD is a post
+all_words2 = text_only_rdd.map(clean_review)   # text_noly, each element in RDD is a post
