@@ -95,3 +95,20 @@ nor_words_bag1 = nor.transform(words_bag1)
 
 words_bag2 = get_tfidf_features(all_words2)
 nor_words_bag2 = nor.transform(words_bag2)
+
+
+# cell 6
+# LDA Modeling
+## REFERENCE: http://spark.apache.org/docs/latest/mllib-clustering.html#latent-dirichlet-allocation-lda
+from pyspark.mllib.clustering import LDA, LDAModel
+from pyspark.mllib.linalg import Vectors
+
+corpus = nor_words_bag1.zipWithIndex().map(lambda x: [x[1], x[0]]).cache()
+ldaModel = LDA.train(corpus, k=5)
+
+print("Learned topics (as distributions over vocab of " + str(ldaModel.vocabSize()) + " words):")
+topics = ldaModel.topicsMatrix()
+for topic in range(5):
+    print("Topic " + str(topic) + ":")
+    for word in range(0, ldaModel.vocabSize()):
+        print(" " + str(topics[word][topic]))
