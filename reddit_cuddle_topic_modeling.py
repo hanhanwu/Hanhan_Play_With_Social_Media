@@ -71,3 +71,27 @@ def clean_review(review_line):
 
 all_words1 = title_text_rdd.map(clean_review)  # title_text, each element in RDD is a post
 all_words2 = text_only_rdd.map(clean_review)   # text_noly, each element in RDD is a post
+
+
+# cell 5
+# convert to bag of words with tf-idf score, then normalize the scores into [0,1] range
+from pyspark.mllib.feature import HashingTF
+from pyspark.mllib.feature import IDF
+from pyspark.mllib.feature import Normalizer
+
+def get_tfidf_features(txt_rdd):
+    hashingTF = HashingTF()
+    tf = hashingTF.transform(txt_rdd)
+    tf.cache()
+    idf = IDF().fit(tf)
+    tfidf = idf.transform(tf)
+
+    return tfidf
+  
+nor = Normalizer(1)
+  
+words_bag1 = get_tfidf_features(all_words1)
+nor_words_bag1 = nor.transform(words_bag1)
+
+words_bag2 = get_tfidf_features(all_words2)
+nor_words_bag2 = nor.transform(words_bag2)
