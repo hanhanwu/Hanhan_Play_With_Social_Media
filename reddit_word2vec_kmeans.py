@@ -36,7 +36,6 @@ print len(posts.keys())
 
 
 # cell 3
-from nltk.stem.porter import *
 import string
 import unicodedata
 
@@ -105,6 +104,89 @@ for itm in kmeans_predicts:
   
   
 # cell 6
+print c1
+print c2
+print c3
+print c4
+print c5
+
+
+
+# try stemming when cleaning the words
+# cell 7
+# Do words stemming, by unify same words that have different format, see whether it the clusters make more sense
+from nltk.stem.porter import *
+import string
+import unicodedata
+
+stopwords = nltk.corpus.stopwords.words('english')
+stemmer = PorterStemmer()
+lst_has_title = []
+lst_has_no_title = []
+
+for v in posts.values():
+  lst_has_title.append(v['title'] + ' ' + v['text'])
+  lst_has_no_title.append(v['text'])
+
+title_text_rdd = sc.parallelize(lst_has_title)
+text_only_rdd = sc.parallelize(lst_has_no_title)
+
+def clean_review(review_line):
+  replace_punctuation = string.maketrans(string.punctuation, ' '*len(string.punctuation))
+  review_text = unicodedata.normalize("NFKD", review_line).encode('ascii','ignore').translate(replace_punctuation).split()
+  review_words = [w.lower() for w in review_text if w.lower() not in stopwords]
+
+  return [stemmer.stem(w) for w in review_words]
+
+cleaned_review = title_text_rdd.map(clean_review)  # title & text, each element in RDD is a post
+
+
+
+# cell 8
+from pyspark.mllib.feature import Word2Vec
+from pyspark.mllib.clustering import KMeans
+import numpy as np
+
+def generate_word2vec_model(doc):
+    return Word2Vec().setVectorSize(10).setSeed(410).fit(doc)
+  
+def generate_kmeans_model(rdd, k):
+    return KMeans.train(rdd, k, maxIterations=10,
+                                initializationMode="random", seed=410, initializationSteps=5, epsilon=1e-4)
+  
+word2vec_model = generate_word2vec_model(cleaned_review)
+mv = word2vec_model.getVectors()  # this is a dictionary, the key is a word, the value is a list of number represent this word
+
+words_array = np.array(mv.values())
+k = 5
+words_rdd = sc.parallelize(words_array)
+kmeans_model = generate_kmeans_model(words_rdd, k)
+
+unique_words = mv.keys()
+kmeans_predicts = []
+for unique_word in unique_words:
+  vec = word2vec_model.transform(unique_word)
+  kmeans_predict = kmeans_model.predict(vec)
+  kmeans_predicts.append((unique_word, kmeans_predict))
+  
+
+# cell 9
+c1 = []
+c2 = []
+c3 = []
+c4 = []
+c5 = []
+
+for itm in kmeans_predicts:
+  if itm[1] == 1: c1.append(itm[0])
+  elif itm[1] == 2: c2.append(itm[0])
+  elif itm[1] == 3: c3.append(itm[0])
+  elif itm[1] == 4: c4.append(itm[0])
+  elif itm[1] == 5: c5.append(itm[0])
+  
+  
+
+# cell 10
 print c1
 print c2
 print c3
