@@ -42,6 +42,11 @@ play with social media and data mining
  http://stackoverflow.com/questions/33072449/extract-document-topic-matrix-from-pyspark-lda-model
 
  http://spark.apache.org/docs/latest/mllib-clustering.html#latent-dirichlet-allocation-lda
+ 
+ * Spark word2vec: http://spark.apache.org/docs/latest/mllib-feature-extraction.html#word2vec
+ * My code - tf-idf & LDA modeling: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_tfidf_LDA.py
+ * My code - word2vec & kmeans: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_word2vec_kmeans.py
+
  * scikit-learn NMF smaple Python code: http://scikit-learn.org/stable/auto_examples/applications/topics_extraction_with_nmf_lda.html
  
 * Entity/Composition Extraction
