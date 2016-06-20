@@ -171,24 +171,42 @@ for unique_word in unique_words:
   
 
 # cell 9
-c1 = []
-c2 = []
-c3 = []
-c4 = []
-c5 = []
+# Get each word post index and cluster index
+def myf(x):
+  return x
 
-for itm in kmeans_predicts:
-  if itm[1] == 1: c1.append(itm[0])
-  elif itm[1] == 2: c2.append(itm[0])
-  elif itm[1] == 3: c3.append(itm[0])
-  elif itm[1] == 4: c4.append(itm[0])
-  elif itm[1] == 5: c5.append(itm[0])
-  
-  
+indexed_text = cleaned_post.zipWithIndex().map(lambda (words, idx): (idx, words))
+indexed_words = indexed_text.flatMapValues(myf).map(lambda (idx, w): (w, idx))  # word and post index
+
+cluster_lookup = sc.parallelize(kmeans_predicts) # word and cluster index
+
+word_pidx_cidx = indexed_words.join(cluster_lookup)  # word, post index, cluster index
+
+
 
 # cell 10
-print c1
-print c2
-print c3
-print c4
-print c5
+# Get post histogram, showing each post words distribution in the clusters
+from pyspark.mllib.linalg import SparseVector
+
+# each item in this list shows clusters of words in each post
+pidx_cidx = word_pidx_cidx.map(lambda (w, (pidx, cidx)): (pidx, cidx)).groupByKey().mapValues(list).coalesce(1)
+
+def get_histogram(t):
+  pidx = t[0]
+  cidx_lst = t[1]
+  unique_cidxs = set(cidx_lst)
+  unique_cidxs = list(unique_cidxs)
+  unique_cidxs.sort()
+  total_clusters = 5
+  cluster_records = np.zeros(total_clusters)
+  for cidx in cidx_lst:
+      cluster_records[cidx] += 1
+  sum_records = np.sum(cluster_records)
+  l1_cluster_records = [x/sum_records for x in cluster_records]
+  sparse_records = [x for x in l1_cluster_records if x > 0]
+  sp_size = total_clusters
+  sp = SparseVector(sp_size, unique_cidxs, sparse_records)
+  return pidx, sp
+
+posts_histogram = pidx_cidx.map(get_histogram)
+posts_histogram.collect()[0]
