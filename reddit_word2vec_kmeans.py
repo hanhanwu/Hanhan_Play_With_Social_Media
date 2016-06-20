@@ -50,14 +50,14 @@ for v in posts.values():
 title_text_rdd = sc.parallelize(lst_has_title)
 text_only_rdd = sc.parallelize(lst_has_no_title)
 
-def clean_review(review_line):
+def clean_post(post_line):
   replace_punctuation = string.maketrans(string.punctuation, ' '*len(string.punctuation))
-  review_text = unicodedata.normalize("NFKD", review_line).encode('ascii','ignore').translate(replace_punctuation).split()
-  review_words = [w.lower() for w in review_text if w.lower() not in stopwords]
+  post_text = unicodedata.normalize("NFKD", post_line).encode('ascii','ignore').translate(replace_punctuation).split()
+  post_words = [w.lower() for w in post_text if w.lower() not in stopwords]
 
-  return review_words
+  return post_words
 
-cleaned_review = title_text_rdd.map(clean_review)  # title & text, each element in RDD is a post
+cleaned_post = title_text_rdd.map(clean_post)  # title & text, each element in RDD is a post
 
 
 # cell 4
@@ -72,7 +72,7 @@ def generate_kmeans_model(rdd, k):
     return KMeans.train(rdd, k, maxIterations=10,
                                 initializationMode="random", seed=410, initializationSteps=5, epsilon=1e-4)
   
-word2vec_model = generate_word2vec_model(cleaned_review)
+word2vec_model = generate_word2vec_model(cleaned_post)
 mv = word2vec_model.getVectors()  # this is a dictionary, the key is a word, the value is a list of number represent this word
 
 words_array = np.array(mv.values())
@@ -131,14 +131,14 @@ for v in posts.values():
 title_text_rdd = sc.parallelize(lst_has_title)
 text_only_rdd = sc.parallelize(lst_has_no_title)
 
-def clean_review(review_line):
+def clean_post(post_line):
   replace_punctuation = string.maketrans(string.punctuation, ' '*len(string.punctuation))
-  review_text = unicodedata.normalize("NFKD", review_line).encode('ascii','ignore').translate(replace_punctuation).split()
-  review_words = [w.lower() for w in review_text if w.lower() not in stopwords]
+  post_text = unicodedata.normalize("NFKD", post_line).encode('ascii','ignore').translate(replace_punctuation).split()
+  post_words = [w.lower() for w in post_text if w.lower() not in stopwords]
 
-  return [stemmer.stem(w) for w in review_words]
+  return [stemmer.stem(w) for w in post_words]
 
-cleaned_review = title_text_rdd.map(clean_review)  # title & text, each element in RDD is a post
+cleaned_post = title_text_rdd.map(clean_post)  # title & text, each element in RDD is a post
 
 
 
@@ -154,7 +154,7 @@ def generate_kmeans_model(rdd, k):
     return KMeans.train(rdd, k, maxIterations=10,
                                 initializationMode="random", seed=410, initializationSteps=5, epsilon=1e-4)
   
-word2vec_model = generate_word2vec_model(cleaned_review)
+word2vec_model = generate_word2vec_model(cleaned_post)
 mv = word2vec_model.getVectors()  # this is a dictionary, the key is a word, the value is a list of number represent this word
 
 words_array = np.array(mv.values())
