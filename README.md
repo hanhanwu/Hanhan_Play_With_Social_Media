@@ -60,8 +60,9 @@ play with social media and data mining
 * Entity/Interaction Extraction
 
  * My code - top NN entities: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_NN_entities.py
+ * My code - top interactions: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_interactions.py
  
-<b>As you can see,</b>, sinple NLP techniques still plays great role in text analysis. I just extracted the top 50 NN entities, we could already find trends and topics that popular and make sense
+<b>As you can see,</b>, sinple NLP techniques still plays great role in text analysis. I just extracted the top 50 NN entities, we could already find trends and topics that popular and make sense. When I go deeper into the semantic layer, we can see NNVBNN interactions are already smary enough to make more sense
 
 * Key Words Search
 
