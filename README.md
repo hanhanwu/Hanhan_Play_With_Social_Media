@@ -57,8 +57,11 @@ play with social media and data mining
  
 <b>To Sum Up: </b>Obviously, if I just want to extract top topics, using scikit-learn is very convenient. But if I want to do predictive modeling, with training and testing data, Spark algorithms are still good choices
  
-* Entity/Composition Extraction
+* Entity/Interaction Extraction
 
+ * My code - top NN entities: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_NN_entities.py
+ 
+<b>As you can see,</b>, sinple NLP techniques still plays great role in text analysis. I just extracted the top 50 NN entities, we could already find trends and topics that popular and make sense
 
 * Key Words Search
 
