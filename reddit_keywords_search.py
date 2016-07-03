@@ -27,7 +27,7 @@ for st in subreddit_lst:
 import praw
 import re
 
-user_agent = ("[use your own user agent]")
+user_agent = ("cuddle_analysis 1.01")
 r = praw.Reddit(user_agent = user_agent)
 
 subreddit_lst = ["cuddlebuddies"]
@@ -43,8 +43,8 @@ for st in subreddit_lst:
   for s in subreddit.get_new(limit = limit_num):
     sid = s.id
     posts[sid] = {}
-    posts[sid]["title"] = s.title.lower()
-    posts[sid]["text"] = s.title.lower()+' '+s.selftext.lower()
+    posts[sid]["title"] = s.title
+    posts[sid]["text"] = s.title + ' ' + s.selftext
     posts[sid]["score"] = s.score
     posts[sid]["comments_num"] = s.num_comments
     posts[sid]["url"] = url_prefix+sid
@@ -54,7 +54,7 @@ key_terms = ['seattle']
 
 for v in posts.values():
   for key_term in key_terms:
-    if key_term in v['title']:
+    if key_term in v['title'].lower():
       print v['title']
       print v['url']
       print
