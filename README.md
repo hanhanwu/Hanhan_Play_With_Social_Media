@@ -65,7 +65,9 @@ play with social media and data mining
 <b>As you can see,</b>, sinple NLP techniques still plays great role in text analysis. I just extracted the top 50 NN entities, we could already find trends and topics that popular and make sense. When I go deeper into the semantic layer, we can see NNVBNN interactions are already smary enough to make more sense
 
 * Key Words Search
- * Python code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_keywords_search.py
+ * 2 methods for key words search: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_keywords_search.py
+ * Reddit posts destribution on cities and countries: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_distribution.py
+ * I think the distribution can bew extended to more interesting level. After running my code you will find that most cuddling new posts are from London, but US is the country that has top 1 number of reddit new posts at this time, the posts amount is far more than any other countries. This can be ectended to culture mapping based on countries, states and time series analysis.
 
 *********************************************
 
