@@ -2,7 +2,7 @@
 import praw
 import re
 
-user_agent = ("cuddle_analysis 1.01")
+user_agent = ("[use your own user agent]")
 r = praw.Reddit(user_agent = user_agent)
 
 subreddit_lst = ["cuddlebuddies"]
@@ -27,7 +27,7 @@ for st in subreddit_lst:
 import praw
 import re
 
-user_agent = ("cuddle_analysis 1.01")
+user_agent = ("[use your own user agent]")
 r = praw.Reddit(user_agent = user_agent)
 
 subreddit_lst = ["cuddlebuddies"]
