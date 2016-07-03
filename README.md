@@ -65,6 +65,7 @@ play with social media and data mining
 <b>As you can see,</b>, sinple NLP techniques still plays great role in text analysis. I just extracted the top 50 NN entities, we could already find trends and topics that popular and make sense. When I go deeper into the semantic layer, we can see NNVBNN interactions are already smary enough to make more sense
 
 * Key Words Search
+ * Python code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/reddit_keywords_search.py
 
 *********************************************
 
