@@ -71,6 +71,15 @@ play with social media and data mining
 
 *********************************************
 
+<b>Pokemon Go</b>
+It's so popular now, although I don't understand why it's so popular, but it will be so much fun to play with its data
+
+* Get pokemon data
+ * https://pokeapi.co/
+
+
+*********************************************
+
 <b>Good To Read</b>
 
 Mobile Network Analysis through mitmproxy: http://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/
