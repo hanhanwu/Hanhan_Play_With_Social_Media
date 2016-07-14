@@ -72,10 +72,12 @@ play with social media and data mining
 *********************************************
 
 <b>Pokemon Go</b>
+
 It's so popular now, although I don't understand why it's so popular, but it will be so much fun to play with its data
 
-* Get pokemon data
+* Potential Data Sources
  * https://pokeapi.co/
+ * Google+ page: https://plus.google.com/117587995505124458333/posts
 
 
 *********************************************
