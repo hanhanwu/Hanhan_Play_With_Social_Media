@@ -83,6 +83,16 @@ It's so popular now, although I don't understand why it's so popular, but it wil
 
 *********************************************
 
+<b>FOR BUSINESS</b>
+
+-- <b>Yelp</b>
+* I really like Yelp business API! So well documented and easy to use! *
+* Business API: https://www.yelp.com/developers/documentation/v2/business
+* Yelp Python: https://github.com/Yelp/yelp-python
+
+
+*********************************************
+
 <b>Good To Read</b>
 
 Mobile Network Analysis through mitmproxy: http://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/
