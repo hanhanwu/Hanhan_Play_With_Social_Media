@@ -89,6 +89,7 @@ It's so popular now, although I don't understand why it's so popular, but it wil
 * I really like Yelp business API! So well documented and easy to use! *
 * Business API: https://www.yelp.com/developers/documentation/v2/business
 * Yelp Python: https://github.com/Yelp/yelp-python
+* Manage Yelp API keys: https://www.yelp.com/developers/documentation/v2/authentication
 
 
 *********************************************
