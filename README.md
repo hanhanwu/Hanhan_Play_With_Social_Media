@@ -91,6 +91,8 @@ It's so popular now, although I don't understand why it's so popular, but it wil
 * Business API: https://www.yelp.com/developers/documentation/v2/business
 * Yelp Python: https://github.com/Yelp/yelp-python
 * Manage Yelp API keys: https://www.yelp.com/developers/documentation/v2/authentication
+* My code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/yelp_search_business.py
+ * The code here is very simple, but the output is poswerful. You just set the param as the term you want to search, define the location, then you will get a list of business output, the search results are good
 
 
 *********************************************
