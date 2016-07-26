@@ -78,7 +78,7 @@ It's so popular now, although I don't understand why it's so popular, but it wil
 * Potential Data Sources
  * https://pokeapi.co/
  * Google+ page: https://plus.google.com/117587995505124458333/posts
- * Instagram, Snapchat, Flickr, GitHub, Twitter: https://www.instagram.com/pokemon_go_/
+ * Yelp, Instagram, Snapchat, Flickr, GitHub, Twitter: https://www.instagram.com/pokemon_go_/
 
 
 *********************************************
