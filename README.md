@@ -73,13 +73,17 @@ play with social media and data mining
 
 <b>Pokemon Go</b>
 
-It's so popular now, although I don't understand why it's so popular, but it will be so much fun to play with its data
+It's so popular now, I don't want to play this game, but it will be so much fun to play with its data
 
 * Potential Data Sources
  * https://pokeapi.co/
  * Google+ page: https://plus.google.com/117587995505124458333/posts
  * Yelp, Instagram, Snapchat, Flickr, GitHub, Twitter: https://www.instagram.com/pokemon_go_/
 
+* Yelp Exploration
+ * explore code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Pokemon_Yelp_Explore.py
+ * FINDING_1: Yelp search could return you very accurate business category when you type a search term, and it's NOT based on simple key words search, since I have checked those returned busienss results, very few of them contain the key words in the search term. The reason I think Yelp search is accurare, is because when I put 'Pokemon' as search team, it returns toy store as the top category, and check their snippet_text, some have mentioned pokemon card game or pokemon center (a game center). But when I put 'Pokemon Go' as the searth term, most of them are restaurant and later when I checked their snippet_text, many of them are Pokemon station
+ 
 
 *********************************************
 
