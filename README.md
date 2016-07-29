@@ -86,6 +86,9 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
  * FINDING_2: For the same search term, close locations share very similar trends. For example, in my code, I used cities in Great Seattle and Metro Vancouver, they have very similar results, but when I input Los Angeles/New York, they have different trends. Based on this, I am thinking, would the order of categories help find close location, and therefore define culture circle?
  
 
+ * United Nations code list by country: http://www.unece.org/cefact/locode/service/location.html
+ 
+
 *********************************************
 
 <b>FOR BUSINESS</b>
