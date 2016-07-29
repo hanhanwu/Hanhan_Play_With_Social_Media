@@ -83,7 +83,7 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * Yelp Exploration
  * explore code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Pokemon_Yelp_Explore.py
  * FINDING_1: Yelp search could return you very accurate business category when you type a search term, and it's NOT based on simple key words search, since I have checked those returned busienss results, very few of them contain the key words in the search term. The reason I think Yelp search is accurare, is because when I put 'Pokemon' as search team, it returns toy store as the top category, and check their snippet_text, some have mentioned pokemon card game or pokemon center (a game center). But when I put 'Pokemon Go' as the searth term, most of them are restaurant and later when I checked their snippet_text, many of them are Pokemon station
- * FINDING_2: For the same search term, close locations share very similar trends. For example, in my code, I used cities in Great Seattle and Metro Vancouver, they have very similar results, but when I input Los Angeles/New York, they have different trends.
+ * FINDING_2: For the same search term, close locations share very similar trends. For example, in my code, I used cities in Great Seattle and Metro Vancouver, they have very similar results, but when I input Los Angeles/New York, they have different trends. Based on this, I am thinking, would the order of categories help find close location, and therefore define culture circle?
  
 
 *********************************************
