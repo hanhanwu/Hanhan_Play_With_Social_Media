@@ -96,3 +96,26 @@ sorted_category_lst = sorted(category_dct.items(), key=operator.itemgetter(1), r
 
 for itm in sorted_category_lst:
   print itm
+
+##***************************##
+
+category_dct = {}
+Canada_search_city_lst = ['Vancouver Canada', 'Burnaby Canada', 'Richmond Canada', 'Surrey Canada']
+my_term = 'Pokemon Go'
+
+params = {
+    'term': my_term
+}
+
+for canada_city in Canada_search_city_lst:
+  canada_response = client.search(us_city, **params)
+  for biz in canada_response.businesses:
+    category_lst = [e[1] for e in biz.categories]
+    for c in category_lst:
+      category_dct.setdefault(c, 0)
+      category_dct[c] += 1
+    
+sorted_category_lst = sorted(category_dct.items(), key=operator.itemgetter(1), reverse = True)
+
+for itm in sorted_category_lst:
+  print itm
