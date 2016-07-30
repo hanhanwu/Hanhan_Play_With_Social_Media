@@ -107,9 +107,10 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 
 *********************************************
 
-<b>Good To Read</b>
+<b>GOOD TO READ</b>
 
-Mobile Network Analysis through mitmproxy: http://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/
+* Mobile Network Analysis through mitmproxy: http://www.shubhro.com/2014/12/18/reverse-engineering-kayak-mitmproxy/
+* Twitter NLP related Analysis (the detailed descriptions are good!): https://www.analyticsvidhya.com/blog/2016/07/capstone-project/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 *********************************************
