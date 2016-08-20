@@ -86,10 +86,17 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
  * FINDING_2: For the same search term, close locations share very similar trends. For example, in my code, I used cities in Great Seattle and Metro Vancouver, they have very similar results, but when I input Los Angeles/New York, they have different trends. Based on this, I am thinking, would the order of categories help find close location, and therefore define culture circle?
  
 
+*********************************************
+
+<b>Culture Circle Project</b>
+
+-- Regarding the findings through Pokemon Go, it is better to work with multiple social media to detect culture circle through multiple ways
+
+* Geo Data 
  * United Nations code list by country: http://www.unece.org/cefact/locode/service/location.html
  * US UN/LOCODE raw data: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/US_raw.txt
  * clean US_raw into unique city name and State name: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/clean_us_raw_Spark2.0.py
- 
+
 
 *********************************************
 
