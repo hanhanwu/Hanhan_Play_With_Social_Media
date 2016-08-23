@@ -101,6 +101,10 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
  * Subcategory Food - Foodology RSS: http://foodology.ca/feed/
 
 
+* My Code
+ * Pokemon catchers geo-location daily data collection, all the data will be stored in flickr_photo each day: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/pokemon_human_activity_data_collection.py
+
+
 *********************************************
 
 <b>FOR BUSINESS</b>
