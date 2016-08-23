@@ -109,7 +109,7 @@ select * from all_flickr_photo
 
 
 ## cell 8
-%sql
+%sql  -- Don't run this cell in the first time
 insert overwrite table all_flickr_photo
 select * from all_flickr_photo0
  union all
