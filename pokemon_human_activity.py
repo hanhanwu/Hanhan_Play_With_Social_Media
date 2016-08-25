@@ -128,3 +128,51 @@ order by post_date desc
 %sql
 drop table tmp_daily_table;
 show tables;
+
+
+
+## cell 11 - convert latitude, longitude into city names
+from pyspark.sql.functions import udf, concat_ws
+from pyspark.sql.types import *
+from urllib2 import urlopen
+import json
+
+flickr_location_df = spark.sql("select * from all_flickr_photo").cache()
+
+def get_level1_locations(lat_lng):
+    elems = lat_lng.split(',')
+    url = "http://maps.googleapis.com/maps/api/geocode/json?"
+    url += "latlng=%s,%s&sensor=false" % (float(elems[0]), float(elems[1]))
+    v = urlopen(url).read()
+    j = json.loads(v)
+    if len(j['results'])>0:
+      components = j['results'][0]['address_components']
+      location_list=[]
+      for c in components:
+          if "locality" in c['types']:
+            location_list.append(c['long_name'])
+          if "administrative_area_level_1" in c['types']:
+            location_list.append(c['long_name'])
+          if "country" in c['types']:
+            location_list.append(c['long_name'])
+      location = ', '.join(filter(None, location_list))
+      return location
+    return ''
+    
+get_level1_locations_udf = udf(lambda lat_lng: get_level1_locations(lat_lng), StringType())
+new_df1 = flickr_location_df.withColumn("level1_locations", get_level1_locations_udf(concat_ws(',', flickr_location_df.latitude, flickr_location_df.longitude).alias('lat_lng'))).cache()
+
+
+
+## cell 12 - add city counts
+new_df1.registerTempTable('HotSpots_level1')
+new_df2 = sqlContext.sql("""
+    SELECT count(id) as count, first(post_date) as post_date, 
+    latitude, longitude,
+    first(level1_locations) as location
+    FROM
+    HotSpots_level1
+    GROUP BY latitude, longitude
+    ORDER BY count desc
+    """).cache()
+new_df2.show(truncate=False)
