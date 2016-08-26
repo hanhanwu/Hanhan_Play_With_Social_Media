@@ -100,6 +100,9 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * Culture Subcategory Data Source
  * Subcategory Food - Foodology RSS: http://foodology.ca/feed/
 
+* R Map Visualization
+ * magrittr, a method replces R nexted functions: https://github.com/hanhanwu/magrittr
+ * Leaflet for R: https://rstudio.github.io/leaflet/
 
 * My Code
  * Pokemon catchers geo-location daily data collection, all the data will be stored in flickr_photo each day: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/pokemon_human_activity.py
