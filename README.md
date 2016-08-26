@@ -103,6 +103,8 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * R Map Visualization
  * magrittr, a method replces R nexted functions: https://github.com/hanhanwu/magrittr
  * Leaflet for R: https://rstudio.github.io/leaflet/
+ * Leaflet API Reference (check params): http://leafletjs.com/reference.html
+ * Get latitude, longitude of a place: http://mondeca.com/index.php/en/any-place-en
 
 * My Code
  * Pokemon catchers geo-location daily data collection, all the data will be stored in flickr_photo each day: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/pokemon_human_activity.py
