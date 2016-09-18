@@ -98,6 +98,9 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
  * clean US_raw into unique city name and State name: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/clean_us_raw_Spark2.0.py
  * Open Geo Data: http://www.datasciencecentral.com/profiles/blogs/6-online-tools-for-open-geo-data
 
+* Geo API
+ * Google Place API in python: https://github.com/slimkrazy/python-google-places
+
 * Culture Subcategory Data Source
  * Subcategory Food - Foodology RSS: http://foodology.ca/feed/
 
