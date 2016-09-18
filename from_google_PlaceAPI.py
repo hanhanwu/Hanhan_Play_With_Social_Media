@@ -96,9 +96,10 @@ df.registerTempTable("merchant_table")
 
 
 # cell 5 - Spark SQL, Now I want to know top recommended bubble tea store near Redmond :)
+## It seems that Google only returns at most 5 review coments for each merchant
 %sql
 
-select Name, Address, avg(Rating) as Avg_Rating
+select Name, Address, avg(Rating) as Avg_Rating, Count(Rating) as Rating_Count
 from merchant_table
 group by Name, Address
 order by avg(Rating) desc
