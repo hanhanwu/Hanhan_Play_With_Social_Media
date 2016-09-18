@@ -99,7 +99,8 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
  * Open Geo Data: http://www.datasciencecentral.com/profiles/blogs/6-online-tools-for-open-geo-data
 
 * Geo API
- * Google Place API in python: https://github.com/slimkrazy/python-google-places
+ * Google Places API intro: https://developers.google.com/places/web-service/intro
+ * Using Google Places API in python: https://github.com/slimkrazy/python-google-places
 
 * Culture Subcategory Data Source
  * Subcategory Food - Foodology RSS: http://foodology.ca/feed/
