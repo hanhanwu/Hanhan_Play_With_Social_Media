@@ -120,6 +120,7 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 <b> API </b>
 
 * Google API Python libraries: https://developers.google.com/api-client-library/python/apis/
+* Google Place API: https://developers.google.com/places/web-service/intro
 
 *********************************************
 
@@ -134,6 +135,12 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * My code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/yelp_search_business.py
  * The code here is very simple, but the output is poswerful. You just set the param as the term you want to search, define the location, then you will get a list of business output, the search results are good
 
+
+-- <b> Google Place API</b>
+* Google Place API doc: https://developers.google.com/places/web-service/intro
+* Place API - Nearby Search: https://developers.google.com/places/web-service/search
+* Python Tutorial: https://github.com/slimkrazy/python-google-places
+* My code - extract merchant details using Google Place API: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/from_google_PlaceAPI.py
 
 *********************************************
 
