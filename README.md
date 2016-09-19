@@ -139,6 +139,8 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 -- <b> Google Place API</b>
 * Google Place API doc: https://developers.google.com/places/web-service/intro
 * Place API - Nearby Search: https://developers.google.com/places/web-service/search
+* Place API - Add Place: https://developers.google.com/places/web-service/add-place
+* Google Merchant Category List: https://developers.google.com/places/supported_types
 * Python Tutorial: https://github.com/slimkrazy/python-google-places
 * My code - extract merchant details using Google Place API: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/from_google_PlaceAPI.py
 
