@@ -32,6 +32,8 @@ for place in query_result.places:
   print place.website
   print p_details["formatted_address"]
   print p_details["formatted_phone_number"]
+  print str(p_details["geometry"]["location"]["lat"])
+  print str(p_details["geometry"]["location"]["lng"])
   
   for r in p_details["reviews"]:
     print r["rating"]
@@ -60,7 +62,7 @@ from pyspark.sql import Row
 
 palces_lst = []
 local_tz = timezone('US/Pacific')
-Merchant = Row("Name", "Open_Now", "Address", "Phone", "Website", "Rating", "Comment", "Rating_Time")
+Merchant = Row("Name", "Open_Now", "Address", "Lat_Lng", "Phone", "Website", "Rating", "Comment", "Rating_Time")
 merchant_lst = []
 
 for place in query_result.places:
@@ -70,6 +72,7 @@ for place in query_result.places:
   p_name = place.name
   p_web = place.website
   p_addr = p_details["formatted_address"]
+  p_lat_lng = str(p_details["geometry"]["location"]["lat"]) + ',' + str(p_details["geometry"]["location"]["lng"])
   if "formatted_phone_number" in p_details.keys():
     p_phone = p_details["formatted_phone_number"]
   else:
@@ -80,7 +83,7 @@ for place in query_result.places:
     r_rating = r["rating"]
     r_text = r["text"]
     t_time = datetime.fromtimestamp(r["time"]).replace(tzinfo=pytz.utc).astimezone(local_tz).strftime('%Y-%m-%d, %H:%M:%S, PST')
-    merchant_lst.append(Merchant(p_name, p_open_now, p_addr, p_phone, p_web, r_rating, r_text, t_time))
+    merchant_lst.append(Merchant(p_name, p_open_now, p_addr, p_lat_lng, p_phone, p_web, r_rating, r_text, t_time))
   
   
 
@@ -103,3 +106,42 @@ select Name, Address, avg(Rating) as Avg_Rating, Count(Rating) as Rating_Count
 from merchant_table
 group by Name, Address
 order by avg(Rating) desc
+
+
+
+# cell 6
+# calculate user's distance with those stores
+
+from geopy.geocoders import Nominatim
+from geopy.distance import vincenty
+from decimal import *
+
+
+def calculate_distance(merchant_loc, user_loc):
+  geolocator = Nominatim()
+
+  merchant_lat_lng = [Decimal(l) for l in merchant_loc.split(',')]
+  al1 = (merchant_lat_lng[0], merchant_lat_lng[1])
+
+  location2 = geolocator.geocode(user_loc)
+  if location2 == None: return None
+  al2 = (location2.latitude, location2.longitude)
+
+  distce = vincenty(al1, al2).miles
+  return distce
+ 
+
+user_location = "Redmond Town Center, WA"
+distUDF = udf(lambda r: calculate_distance(r, user_location))
+df_dist = df.withColumn("Distance", distUDF(df.Lat_Lng))
+df_dist.show()
+
+
+
+# cell 7 - get merchants based on their average ratings and location close to the user
+%sql
+
+select Name, Address, Open_Now, avg(Rating) as Avg_Rating, Count(Rating) as Rating_Count, Distance
+from merchant_distance_table
+group by Name, Address, Open_Now, Distance
+order by avg(Rating) desc, Distance asc
