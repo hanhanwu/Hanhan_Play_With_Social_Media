@@ -142,7 +142,8 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * Place API - Add Place: https://developers.google.com/places/web-service/add-place
 * Google Merchant Category List: https://developers.google.com/places/supported_types
 * Python Tutorial: https://github.com/slimkrazy/python-google-places
-* My code - extract merchant details using Google Place API: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/from_google_PlaceAPI.py
+* My code - Nearby Search and merchant sorting methods: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_Nearby_Search.py
+* My code - Add a place to Google API and it will become searchable from Google Nearby Search method, immediately: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_Add_Place.py
 
 *********************************************
 
