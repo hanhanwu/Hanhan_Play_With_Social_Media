@@ -62,7 +62,7 @@ from pyspark.sql import Row
 
 palces_lst = []
 local_tz = timezone('US/Pacific')
-Merchant = Row("Name", "Open_Now", "Address", "Lat_Lng", "Phone", "Website", "Rating", "Comment", "Rating_Time")
+Merchant = Row("Name", "Open_Now", "Categories", "Address", "Lat_Lng", "Phone", "Website", "Rating", "Comment", "Rating_Time")
 merchant_lst = []
 
 for place in query_result.places:
@@ -77,13 +77,18 @@ for place in query_result.places:
     p_phone = p_details["formatted_phone_number"]
   else:
     p_phone = None
-  p_open_now = p_details["opening_hours"]["open_now"]
+  if "openining_hours" in p_details.keys():
+    p_open_now = p_details["opening_hours"]["open_now"]
+  else:
+    p_open_now = False
+  p_categories = ','.join(p_details["types"])
   
   for r in p_details["reviews"]:
     r_rating = r["rating"]
     r_text = r["text"]
     t_time = datetime.fromtimestamp(r["time"]).replace(tzinfo=pytz.utc).astimezone(local_tz).strftime('%Y-%m-%d, %H:%M:%S, PST')
-    merchant_lst.append(Merchant(p_name, p_open_now, p_addr, p_lat_lng, p_phone, p_web, r_rating, r_text, t_time))
+    merchant_lst.append(Merchant(p_name, p_open_now, p_categories, p_addr, p_lat_lng, p_phone, p_web, r_rating, r_text, t_time))
+
   
   
 
