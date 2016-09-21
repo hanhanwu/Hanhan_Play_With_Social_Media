@@ -140,10 +140,12 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * Google Place API doc: https://developers.google.com/places/web-service/intro
 * Place API - Nearby Search: https://developers.google.com/places/web-service/search
 * Place API - Add Place: https://developers.google.com/places/web-service/add-place
+* Place API - Place AutoComplete: https://developers.google.com/places/web-service/autocomplete
 * Google Merchant Category List: https://developers.google.com/places/supported_types
 * Python Tutorial: https://github.com/slimkrazy/python-google-places
 * My code - Nearby Search and merchant sorting methods: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_Nearby_Search.py
 * My code - Add a place to Google API and it will become searchable from Google Nearby Search method, immediately: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_Add_Place.py
+* My code - Place Auto Complete (it seems that, fater adding a place, it becomes available in Nearby search, but if you want it to be available in Auto Complete, needs Google approval): https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_AutoComplete.py
 
 *********************************************
 
