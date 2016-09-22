@@ -149,6 +149,12 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * My code - Place Auto Complete (it seems that, fater adding a place, it becomes available in Nearby search, but if you want it to be available in Auto Complete, needs Google approval): https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_AutoComplete.py
 * My code - Query Auto Complete (it seems that, fater adding a place, it becomes available in Nearby search, but if you want it to be available in Query Auto Complete, needs Google approval): https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Google_Place_QueryAutoComplete.py
 
+
+-- <b> Foursquare API </b>
+* Foursquare API overview: https://developer.foursquare.com/start
+* Foursquare Search: https://developer.foursquare.com/start/search
+* My code - Search Place: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Foursquare_search.py
+
 *********************************************
 
 <b>GOOD TO READ</b>
