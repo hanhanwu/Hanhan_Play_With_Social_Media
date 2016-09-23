@@ -52,4 +52,28 @@ for ve in all_venues:
   break
 
 
-# TO BE CONTINUED....
+
+# cell 3 - for more about each venue, you may need to get ACCESS_TOKEN first, before sending POST/GET requests
+import requests 
+import json
+
+ACCESS_TOKEN = "[YOUR ACCESS TOKEN]"
+PARAMS = "&v=YYYYMMDD"
+
+likes_url = "https://api.foursquare.com/v2/venues/4ac83a79f964a520f7bb20e3/likes?oauth_token=" + ACCESS_TOKEN + PARAMS
+print likes_url
+
+hours_url = "https://api.foursquare.com/v2/venues/4ac83a79f964a520f7bb20e3/hours?oauth_token=" + ACCESS_TOKEN + PARAMS
+print hours_url
+
+
+r1 = requests.get(likes_url)
+print r1.status_code
+print r1.json()
+print
+
+r2 = requests.get(hours_url)
+print r2.status_code
+print r2.json()
+print
+
