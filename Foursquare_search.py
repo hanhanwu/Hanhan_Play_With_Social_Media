@@ -1,6 +1,15 @@
-# cell 0 - app ids
+# cell 0 - app ids, latitude and longitude
+from geopy.geocoders import Nominatim
+from geopy.distance import vincenty
+
 CLIENT_ID = "[YOUR CLIENT ID]"
 CLIENT_SECRET = "[YOUR CLIENT SECRET]"
+
+geolocator = Nominatim()
+location1 = geolocator.geocode("Redmond Town Center, WA")   # it seems that cannot write abbreviation here
+al1 = (location1.latitude, location1.longitude)
+print al1
+
 
 
 # cell 1 - search request
