@@ -157,6 +157,13 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * API endpoints (this tells all types of POST/GET requests you could send): https://developer.foursquare.com/docs/
 * My code - Search Place: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Foursquare_search.py
 
+
+-- <b> OpenCorporate API </b>
+* API document: http://api.opencorporates.com/documentation/API-Reference
+* ISO Country Code: https://en.wikipedia.org/wiki/ISO_3166-1
+* ISO 8601 format: https://en.wikipedia.org/wiki/ISO_8601
+* My code - get registered company detailes: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/OpenCorporate_Company_Search.py
+
 *********************************************
 
 <b>GOOD TO READ</b>
