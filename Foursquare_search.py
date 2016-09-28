@@ -77,3 +77,23 @@ print r2.status_code
 print r2.json()
 print
 
+
+
+# cell 4 - generate latitude, longitude based on Postal Code, latitude anf longitude play a significant role in many Foursquare requests
+# latitude and longittude are important for Foursquare search
+from geopy.geocoders import Nominatim
+from geopy.distance import vincenty
+
+
+def get_ll(postal_code):
+  if postal_code == None: return None
+  geolocator = Nominatim()
+  location = geolocator.geocode(postal_code)   # it seems that cannot write abbreviation here
+  if location == None: return None
+  al = str(location.latitude) + ', ' + str(location.longitude)
+  return al
+
+llUDF = udf(lambda r: get_ll(r))
+new_df = buz_member_df.withColumn("lat_lng", llUDF(buz_member_df.PostalCode)).cache()
+
+
