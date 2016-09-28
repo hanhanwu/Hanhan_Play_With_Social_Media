@@ -155,6 +155,7 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 * Hierarchical venue categories (very specific): https://developer.foursquare.com/categorytree
 * How to get access token (redirect_url doesn't require you to really create a website, I'm simply using my GitHub url): https://developer.foursquare.com/overview/auth
 * API endpoints (this tells all types of POST/GET requests you could send): https://developer.foursquare.com/docs/
+* Foursquare venue add: https://developer.foursquare.com/docs/venues/add
 * My code - Search Place: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Foursquare_search.py
 
 
