@@ -120,7 +120,7 @@ It's so popular now, I don't want to play this game, but it will be so much fun 
 <b> API </b>
 
 * Google API Python libraries: https://developers.google.com/api-client-library/python/apis/
-* Google Place API: https://developers.google.com/places/web-service/intro
+* Speech to Text (online short words, online large file, offine, open source): https://www.quora.com/What-are-the-top-ten-speech-recognition-APIs
 
 *********************************************
 
