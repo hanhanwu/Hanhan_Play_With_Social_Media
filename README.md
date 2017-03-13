@@ -22,6 +22,17 @@ play with social media and data mining
 
 *********************************************
 
+<b>Stackoverflow Mining</b>
+
+* This is StackExchange API: https://api.stackexchange.com/docs
+ * But something looks wrong in this API, because I didn't find a way to get all the answers of each question through this API.
+* Py-StackExchange has even less functions for my requirements: https://github.com/lucjon/Py-StackExchange
+* Fortunately, their website is parsable, although still have to use python selenium, it's not the most complex website I have even dealt with. So this is my code to extract a post data (question, answers and comments for the answers): https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Stackoverflow_data_extraction.py
+* Here, I am not extracting comments data for the question, and some other data such as time, because my curent project does not need those yet.
+
+
+*********************************************
+
 <b>Twitter Mining</b>
 
 1. Create a twitter app and get CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET: https://apps.twitter.com/
