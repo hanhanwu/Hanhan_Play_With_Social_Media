@@ -6,13 +6,24 @@ import json
 import collections
 
 
-def test_api():
-    so = se.Site(se.StackOverflow)
+def get_question_lists(output_path):
+    so = se.Site(se.StackOverflow, "[your api key]")
 
-    for q in so.questions(pagesize=1):
-        print(q.title)
-        print(q)
-        break
+    pagesize = 100
+    tagged = "python"
+    fromdate = 1488326400  # 2017/3/1
+    todate = 1489536000    # 2017/3/15
+
+    question_dct = {}
+
+
+    for q in so.questions(pagesize=pagesize, tagged=tagged, page=1, fromdate = fromdate, todate = todate,
+                          min = fromdate, max = todate):
+        question_dct[q.id] = q.link
+
+    with open(output_path, 'a') as out:
+        for qid, qlink in question_dct.items():
+            out.write(str(qid) + ", " + qlink + "\n")
 
 
 # get question, answers and answer comments data
