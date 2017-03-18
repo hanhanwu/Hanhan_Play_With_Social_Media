@@ -30,6 +30,8 @@ def get_question_lists(output_path):
 def get_post_data(qid, qurl, n, error_file):
     driver = webdriver.Firefox()
     driver.get(qurl)
+    dsession_id = driver.session_id    # if the url is not loading, kill the driver
+    if dsession_id == None: driver.quit()
     time.sleep(5)
     try:
         mainbar = driver.find_element_by_id("mainbar")
@@ -165,7 +167,13 @@ def main():
 
     sum = 0
     answer_threshold = 3
+    checked_id_lst = set()
+    with open(checked_ids) as check_in:
+        for r in check_in:
+            checked_id_lst.add(r.replace("\n", ""))
+
     for q_id, q_url in question_dct.items():
+        if q_id in checked_id_lst: continue
         v = get_post_data(q_id, q_url, answer_threshold, error_file)
         sum += v
         if v != 0:
