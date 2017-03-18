@@ -150,6 +150,7 @@ def get_post_data(qid, qurl, n, error_file):
 def main():
     question_list_output = "output/test.txt"
     error_file = "output/exception.txt"
+    checked_ids = "output/checked.txt"
 
     # get_question_lists(question_list_output)
 
@@ -169,6 +170,8 @@ def main():
         sum += v
         if v != 0:
             print(sum)
+        with open(checked_ids, 'a') as checked_out:
+            checked_out.write(q_id + "\n")
         time.sleep(5)
 
 if __name__ == "__main__":
