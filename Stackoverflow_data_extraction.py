@@ -1,4 +1,4 @@
-# extract questions and answers from StackOverflow
+# extract post data from StackOverflow
 import stackexchange as se
 from selenium import webdriver
 import time
@@ -16,7 +16,6 @@ def get_question_lists(output_path):
     todate = 1489536000    # 2017/3/15
 
     question_dct = {}
-
 
     for q in so.questions(pagesize=pagesize, tagged=tagged, page=1, fromdate = fromdate, todate = todate,
                           min = fromdate, max = todate):
@@ -39,7 +38,7 @@ def get_post_data(qid, qurl, n, error_file):
         answers_body = mainbar.find_element_by_id("answers")
         answers = answers_body.find_elements_by_class_name("answer")
         answers_len = len(answers)
-        if answers_len < n:
+        if answers_len < n:   # ignore those posts with answers amount less than n
             driver.quit()
             return 0
 
