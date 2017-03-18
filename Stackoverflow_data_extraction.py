@@ -6,6 +6,7 @@ import json
 import collections
 
 
+# extract list of question urls within the time range
 def get_question_lists(output_path):
     so = se.Site(se.StackOverflow, "[your api key]")
 
@@ -27,20 +28,32 @@ def get_question_lists(output_path):
 
 
 # get question, answers and answer comments data
-def get_post_data(qurl, output_file):
+def get_post_data(qid, qurl, n, error_file):
     driver = webdriver.Firefox()
     driver.get(qurl)
     time.sleep(5)
     try:
+        mainbar = driver.find_element_by_id("mainbar")
+
+        # get answers data
+        answers_body = mainbar.find_element_by_id("answers")
+        answers = answers_body.find_elements_by_class_name("answer")
+        answers_len = len(answers)
+        if answers_len < n:
+            driver.quit()
+            return 0
+
         # get question data
         q_title = driver.find_element_by_class_name("question-hyperlink").text
-
-        mainbar = driver.find_element_by_id("mainbar")
 
         q_body = mainbar.find_element_by_class_name("question")
         q_id = q_body.get_attribute("data-questionid")
         q_vote_count = int(q_body.find_element_by_class_name("vote-count-post ").text)
-        q_favorite_count = int(q_body.find_element_by_class_name("favoritecount").text)
+        q_favorite_count = q_body.find_element_by_class_name("favoritecount").text.strip()
+        if q_favorite_count == "":
+            q_favorite_count = 0
+        else:
+            q_favorite_count = int(q_favorite_count)
 
         q_content_text = ""
         q_text_lst, q_code_lst  = [], []
@@ -62,9 +75,6 @@ def get_post_data(qurl, output_file):
                           "answers":{}}
 
 
-        # get answers data
-        answers_body = mainbar.find_element_by_id("answers")
-        answers = answers_body.find_elements_by_class_name("answer")
 
         for answer in answers:
             a_id = answer.get_attribute("data-answerid")
@@ -120,22 +130,47 @@ def get_post_data(qurl, output_file):
 
         driver.quit()
 
+        if answers_len == 3:
+            output_file = "output/size3/" + qid + ".json"
+        elif answers_len == 4:
+            output_file = "output/size4/" + qid + ".json"
+        else:
+            output_file = "output/size5+/" + qid + ".json"
+
         with open(output_file, 'a') as out:
             json.dump(collections.OrderedDict(post_dct), out)
+        return 1
 
     except:
-        print(qurl)
+        with open(error_file, 'a') as exe_out:
+            exe_out.write(qid + ", " + qurl + "\n")
         driver.quit()
+        return 0
 
 
 def main():
-    questions_urls = [
-        "http://stackoverflow.com/questions/4843173/how-to-check-if-type-of-a-variable-is-string/35926059#35926059"
-    ]
-    output = "output/post_4843173.json"
+    question_list_output = "output/test.txt"
+    error_file = "output/exception.txt"
 
-    for qurl in questions_urls:
-        get_post_data(qurl, output)
+    # get_question_lists(question_list_output)
+
+    question_dct = {}
+
+    with open(question_list_output) as indata:
+        for r in indata:
+            elems = r.split(', ')
+            q_id = elems[0]
+            q_url = elems[1].replace("\n", "")
+            question_dct[q_id] = q_url
+
+    sum = 0
+    answer_threshold = 3
+    for q_id, q_url in question_dct.items():
+        v = get_post_data(q_id, q_url, answer_threshold, error_file)
+        sum += v
+        if v != 0:
+            print(sum)
+        time.sleep(5)
 
 if __name__ == "__main__":
     main()
