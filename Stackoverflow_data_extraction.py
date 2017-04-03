@@ -112,7 +112,9 @@ def get_post_data(qid, qurl, n, error_file):
                 comment_code_lst = []
                 comment_id = comment.get_attribute("id").split("comment-")[1]
                 try:
-                    comment_vote = int(comment.find_element_by_class_name(" comment-score").text)
+                    comment_vote = comment.find_element_by_class_name(" comment-score").text
+                    if comment_vote.strip() == "":
+                        comment_vote = 0
                     comment_content= comment.find_element_by_class_name("comment-copy")
                     comment_content_text = comment_content.text
                     comment_code = comment_content.find_elements_by_tag_name("code")
