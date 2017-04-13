@@ -1,0 +1,123 @@
+http://stackoverflow.com/questions/14940979/python-regular-expression-for-extrating-url,N,
+http://stackoverflow.com/questions/17093769/python-child-instance-class-of-an-instance-of-parent-class,N,
+http://stackoverflow.com/questions/20108817/numpy-vectorization-of-double-python-for-loop,Y,The difficult part about this is that you only want to
+http://stackoverflow.com/questions/22000334/compare-values-in-a-list-and-create-boolean-python,N,
+http://stackoverflow.com/questions/19950232/incorrect-value-with-python-multiprocessing-pool-with-red-hat-satellite-api,N,
+http://stackoverflow.com/questions/20468768/how-to-order-an-external-list-in-python,Y,"You don't need to write your own sorting algorithm, Python already"
+http://stackoverflow.com/questions/15121405/threads-or-processes,N,
+http://stackoverflow.com/questions/21817135/is-there-a-way-to-find-out-why-a-python-program-closed,N,
+http://stackoverflow.com/questions/19261684/python-reading-file-error-with-array,N,
+http://stackoverflow.com/questions/17653954/trying-to-make-a-python-dictionary-from-a-file-but-i-keep-getting-errors-like-t,N,
+http://stackoverflow.com/questions/17891303/dictionaries-how-to-compare-values-and-merge-if-values-are-the-same,Y,Actually not very interesting puzzle supposing that
+http://stackoverflow.com/questions/16553930/i-have-a-simple-python-dict-why-is-a-generator-reference-printed-instead-of-the,N,
+http://stackoverflow.com/questions/19100344/need-for-range-in-a-for-loop,N,
+http://stackoverflow.com/questions/21541719/pythonic-way-for-the-following-code,N,
+http://stackoverflow.com/questions/18536137/python-open-applications-through-your-program,N,
+http://stackoverflow.com/questions/19809978/issue-reading-arrays-from-a-txt-file,N,
+http://stackoverflow.com/questions/15330927/how-do-i-become-familiar-with-python-django-framework-if-im-a-front-end-develop,N,
+http://stackoverflow.com/questions/15103835/learning-loops-and-lists,Y,"The question was ""How do you make a 2-dimensional (2D) list?""."
+http://stackoverflow.com/questions/17104710/list-index-out-of-range-while-counting-python,N,
+http://stackoverflow.com/questions/19555395/python-framework-is-missing-from-os-x-10-9-sdk-why-also-workaround,N,
+http://stackoverflow.com/questions/22498297/read-a-file-line-by-line-and-append-word,N,
+http://stackoverflow.com/questions/14299100/get-both-parent-and-child-text-with-xpath-htmlxpathselector,N,
+http://stackoverflow.com/questions/14992914/pythonic-way-to-build-a-combination-string,Y,The itertools module:
+http://stackoverflow.com/questions/18003191/an-algorithm-to-find-transitions-in-python,N,
+http://stackoverflow.com/questions/21077876/a-member-tuple-as-opposed-to-member-variable-of-a-class,N,
+http://stackoverflow.com/questions/17930734/tokenizing-a-string-gives-some-words-merged,N,
+http://stackoverflow.com/questions/22236076/python-help-dictionaries-keys-values,N,
+http://stackoverflow.com/questions/15726618/array-indexing-in-python,N,
+http://stackoverflow.com/questions/16189743/how-to-combine-two-python-scripts,N,
+http://stackoverflow.com/questions/21845522/how-to-get-user-input-of-a-grid-of-characters-in-python,N,
+http://stackoverflow.com/questions/16716813/how-to-access-a-methods-attribute,N,
+http://stackoverflow.com/questions/15734259/how-to-use-python-modules-in-jepp,N,
+http://stackoverflow.com/questions/20288622/working-with-words-and-need-to-translate-abc-to-alpha-bravo-charlie,N,
+http://stackoverflow.com/questions/16755598/best-way-to-change-words-into-numbers-using-specific-word-list,N,
+http://stackoverflow.com/questions/22495894/should-i-deploy-only-the-pyc-files-on-server-if-i-worry-about-code-security,N,
+http://stackoverflow.com/questions/15798109/python-beginner-lists,N,
+http://stackoverflow.com/questions/16053648/python-how-to-write-a-function-which-loops-over-itself-with-a-number-of-its-arg,N,
+http://stackoverflow.com/questions/15210206/how-would-i-create-a-2d-vector-object-that-could-be-initialized-with-an-x-and-a,Y,I think the most pythonic way would be to
+http://stackoverflow.com/questions/15605926/how-to-draw-a-plot-joining-points-from-two-measurement-times,N,
+http://stackoverflow.com/questions/17255271/intersect-dictionaries-with-keys-averaged,N,
+http://stackoverflow.com/questions/22276186/python-generating-tuples-in-a-list,N,
+http://stackoverflow.com/questions/18669698/filtering-part-of-a-list,N,
+http://stackoverflow.com/questions/19470158/is-there-any-way-you-can-get-back-to-the-original-function,N,
+http://stackoverflow.com/questions/20194847/passing-in-forms-into-html-page-django,N,
+http://stackoverflow.com/questions/19711344/why-is-with-open-better-for-opening-files-in-python,N,
+http://stackoverflow.com/questions/15637184/regular-expression-matching-with-underscores,N,
+http://stackoverflow.com/questions/19736625/find-all-matching-words-in-string-from-url,Y,"If that is your first Python script,"
+http://stackoverflow.com/questions/14635914/compressing-n-time-object-member-call,N,
+http://stackoverflow.com/questions/15812547/keep-duplicates-in-a-list-in-python,Y,This is a short way to do it if the list is sorted already
+http://stackoverflow.com/questions/22825593,N,
+http://stackoverflow.com/questions/19429470/python-2-7-5-making-loop-with-unlimited-user-input-accumulate-totals-applying,N,
+http://stackoverflow.com/questions/21418153/create-dictionary-from-multiple-lists,N,
+http://stackoverflow.com/questions/14330487/rewrite-a-python-code,N,
+http://stackoverflow.com/questions/14900785/inner-join-with-multiindex-fails-if-no-overlap,N,
+http://stackoverflow.com/questions/20862153/how-to-find-the-key-in-dictionary-which-holds-the-last-appearance-of-one-valuep,N,
+http://stackoverflow.com/questions/18110455/need-some-clarification-on-the-operator-in-python,N,
+http://stackoverflow.com/questions/16241086/typeerror-cannot-concatenate-str-and-builtin-function-or-method-objects,N,
+http://stackoverflow.com/questions/14380488/map-multiple-functions-to-csv-rows,Y,"Didn't test (no sample input), but this seems"
+http://stackoverflow.com/questions/22928505/string-replace-avoid-repeat,N,
+http://stackoverflow.com/questions/20512297/how-can-i-concatenate-a-series-onto-a-dataframe-with-pandas,N,
+http://stackoverflow.com/questions/15375009/im-looking-for-a-simple-way-to-generate-code-in-python,N,
+http://stackoverflow.com/questions/15891199/my-python-function-wont-return-or-update-the-value,N,
+http://stackoverflow.com/questions/17386808/python-how-to-create-a-file-txt-and-record-information-in-it,Y,"Here's the code, I redesigned it to"
+http://stackoverflow.com/questions/18151994/sort-python-dict-by-datetime-value,N,
+http://stackoverflow.com/questions/21361281/mutate-tuple-of-lists-getting-tuple-object-does-not-support-item-assignment,N,
+http://stackoverflow.com/questions/22286529/python-and-tkinter,N,
+http://stackoverflow.com/questions/22151075/newbie-issue-with-loops,N,
+http://stackoverflow.com/questions/19407385/django-admin-listing-not-showing-data-correctly,N,
+http://stackoverflow.com/questions/17952414/reading-text-line-by-line-and-storing-each-element-in-different-arrays-in-python,N,
+http://stackoverflow.com/questions/14807612/best-way-to-find-objects-not-present-in-both-lists,N,
+http://stackoverflow.com/questions/18947994/getting-a-return-value-via-ajax,N,
+http://stackoverflow.com/questions/15837116/library-for-sending-http-requests-in-file-like-objects,Y,As far as I can tell
+http://stackoverflow.com/questions/20633161/how-to-remove-the-unwanted-character-like-white-spaces-and-newline-from-a-string,N,
+http://stackoverflow.com/questions/22303259/better-way-to-find-common-words-in-a-tuple,Y,I tried to extend your question.
+http://stackoverflow.com/questions/17636194/how-does-python-seed-the-mersenne-twister,Y,The seed is based on the clock or
+http://stackoverflow.com/questions/19035067/can-i-use-set-comprehension-to-create-a-list-of-dict-from-a-bigger-list-of-dict,N,
+http://stackoverflow.com/questions/16302185/how-do-i-create-multiple-dictionaries-based-on-nested-for-loops,N,
+http://stackoverflow.com/questions/19350627/shortening-a-list,Y,You could do something like
+http://stackoverflow.com/questions/19438189/python-property-vs-func,N,
+http://stackoverflow.com/questions/19453451/sum-of-nested-list-with-empty-list-explanation,Y," First, it's being displayed that way because you're using ipython"
+http://stackoverflow.com/questions/21388404,Y,You have indented the
+http://stackoverflow.com/questions/17415354/hardware-interrupt-for-synchronous-data-acquisition,N,
+http://stackoverflow.com/questions/19828494/why-does-this-pop0-work-like-this,Y,Your problem is that your code both
+http://stackoverflow.com/questions/21423308/difficulty-with-column-column-line-associations-manipulations,N,
+http://stackoverflow.com/questions/22663966/changing-order-of-ordered-dictionary-in-python,N,
+http://stackoverflow.com/questions/14439477/log-files-collecting-and-handling-system,Y,You could go with syslog
+http://stackoverflow.com/questions/16323002/try-except-python,N,
+http://stackoverflow.com/questions/20081005/loop-for-and-add-to-list,N,
+http://stackoverflow.com/questions/19181872/group-list-by-sum-of-items,N,
+http://stackoverflow.com/questions/15580586/bash-or-python-csv-multiple-field-handling,N,
+http://stackoverflow.com/questions/16009050/use-of-in-python,N,
+http://stackoverflow.com/questions/19755157/print-first-25-lines-of-a-text-file-then-next-25-etc,N,
+http://stackoverflow.com/questions/15980969/why-my-code-doesnt-work-the-else-statement,N,
+http://stackoverflow.com/questions/16014246/time-based-data-analysis-with-python,N,
+http://stackoverflow.com/questions/22535965/how-to-add-the-list-elements-in-python,N,
+http://stackoverflow.com/questions/15598980/interact-with-long-running-python-process,N,
+http://stackoverflow.com/questions/20537262/python-splitting-a-string-in-a-list-into-multiple-strings,N,
+http://stackoverflow.com/questions/19641817/how-do-i-stop-the-dot-from-printing-after-the-last-letter,N,
+http://stackoverflow.com/questions/18223311/what-is-the-significance-of-in-python,N,
+http://stackoverflow.com/questions/15434279/the-most-pythonic-way-to-implement-two-constructors,N,
+http://stackoverflow.com/questions/19596446/parse-list-of-x-y-coordinates-and-detect-continious-areas,N,
+http://stackoverflow.com/questions/17025403/to-find-and-replace-dashes-in-specific-column,N,
+http://stackoverflow.com/questions/20637974/finding-standard-deviation,N,
+http://stackoverflow.com/questions/15795404/how-to-make-an-action-happen-every-minute-in-python,Y,Here's an answer that does not involve threads
+http://stackoverflow.com/questions/20625774/reading-a-comma-delimited-file-with-a-date-object-and-a-float-with-python,Y,I am not sure what is wrong with numpy
+http://stackoverflow.com/questions/17333021/pythons-type-function-and-its-if-related-problems,N,
+http://stackoverflow.com/questions/15963654/reversing-a-string-in-python-based-on-block-size-in-python,N,
+http://stackoverflow.com/questions/19984843/x-y-pair-for-max-z-value-in-list,N,
+http://stackoverflow.com/questions/17864466/flatten-a-list-of-strings-and-lists-of-strings-and-lists-in-python,N,
+http://stackoverflow.com/questions/21371299/formatting-sql-like,N,
+http://stackoverflow.com/questions/15679162/openerp-help-me-to-remove-this,N,
+http://stackoverflow.com/questions/22635030/a-simple-python-code-about-if,N,
+http://stackoverflow.com/questions/22864573/creating-a-function-to-sum-the-results-of-an-equation-please-look-not-so-simpl,Y,You should change the function to
+http://stackoverflow.com/questions/19400870/get-all-link-site-in-source-html-python,N,
+http://stackoverflow.com/questions/22821460/numpy-save-2d-array-to-text-file,N,
+http://stackoverflow.com/questions/15901293/fast-value-swapping-in-numpy-array,Y,"To swap 0 and 255, you can use XOR"
+http://stackoverflow.com/questions/18063906/parsing-a-string-to-extract-a-delimited-unit-having-an-alphabetic-starting-chara,N,
+http://stackoverflow.com/questions/21248655/list-indices-must-be-integers-not-str,N,
+http://stackoverflow.com/questions/15773738/compare-rotated-lists-in-python,N,
+http://stackoverflow.com/questions/14424064/python-3-when-to-use-dict-when-list-of-tuples,N,
+http://stackoverflow.com/questions/14843777/how-to-write-python-lambda-with-multiple-lines,N,
+http://stackoverflow.com/questions/20906549/python-list-output-troubleshooting,N,
+http://stackoverflow.com/questions/20382403/how-to-properly-handle-a-circular-module-dependency-in-python,Y,So if I'm reading your use case right
