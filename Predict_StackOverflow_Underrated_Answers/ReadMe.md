@@ -3,6 +3,15 @@ This project is to explore the existence of Underrated Answers in StackOverflow,
 
 <b>Underrated Answer</b> - The best solution at the time when I collect the data, but it has less votes than the top voted answer.
 
+
+*******************************************************************************
+
+FINAL PPT & PAPER
+
+* Final Presentation (the presenattion is held to show progress, no need to finish the project at that time): https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Predict_StackOverflow_Underrated_Answers/Predict%20StackOverflow%20Underrated%20Answers.pdf
+* <b>Final Paper</b>: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Predict_StackOverflow_Underrated_Answers/886_final_project_Hanhan_Wu.pdf
+
+
 *******************************************************************************
 
 OVERALL APPROACH
@@ -68,10 +77,3 @@ CODE DETAILS
     * Both Randomforests and Boruta has chosen 7 top features which are the same but with different rankings, 6 of them are related to coding style and they are all 0 for "Y" but have various values for "N". The 7th is about sentiment, which shows similar distribution in "Y" and "N". 
     * The insights I have gained is, based on this very small data set, it is possible to predict underrated answers, the reason behind the underrating is more about coding style than sentiment.
 
-
-*******************************************************************************
-
-FINAL PPT & PAPER
-
-* Final Presentation (the presenattion is held to show progress, no need to finish the project at that time): https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Predict_StackOverflow_Underrated_Answers/Predict%20StackOverflow%20Underrated%20Answers.pdf
-* <b>Final Paper</b>: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/Predict_StackOverflow_Underrated_Answers/886_final_project_Hanhan_Wu.pdf
