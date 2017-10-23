@@ -29,6 +29,7 @@ play with social media and data mining
   * Install Google python: https://developers.google.com/api-client-library/python/
   * To get Youtube API Key: https://developers.google.com/youtube/v3/getting-started
   * Youtube Python Samples: https://github.com/hanhanwu/api-samples/tree/master/python
+  * BTW, Google API sometimes looks confusing or too complex to me, if you want to see what does returned result look like, better just to print out the response result and check in JSON viewer: http://jsonviewer.stack.hu/
   * My code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/DEF_CON_video_list_linear_optimization.ipynb
 
 
