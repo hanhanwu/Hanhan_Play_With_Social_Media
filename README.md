@@ -22,6 +22,18 @@ play with social media and data mining
 
 *********************************************
 
+<b>YouTube Mining</b>
+
+* DEF CON & Linear Optimization
+  * I really like the talks in DEF CON, many hackers are there and some of them will do pretty cool demo while allowing you to learn deeper in cyber security. Therefore, every morning, if I don't need to leave very early, I will get up early to watch a DEF CON video. The more video I have watched, the more I have realized, there are some pretty cool video but others are not. Sometimes you will see very ambitious title of the videos, maybe they really did lots of work but you just cannot feel excited nor feel it's a good learning experience, then I would ask myself, why did I get up so early this morning just to watch such a video. So, here, I'm going to apply linear optimization on parsed Youtube DEF CON video, to help me choose videos for my morning
+  * Install Google python: https://developers.google.com/api-client-library/python/
+  * To get Youtube API Key: https://developers.google.com/youtube/v3/getting-started
+  * Youtube Python Samples: https://github.com/hanhanwu/api-samples/tree/master/python
+  * My code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/DEF_CON_video_list_linear_optimization.ipynb
+
+
+*********************************************
+
 <b>Stackoverflow Mining</b>
 
 * This is StackExchange API: https://api.stackexchange.com/docs
