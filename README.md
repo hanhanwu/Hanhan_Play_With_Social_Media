@@ -30,6 +30,11 @@ play with social media and data mining
   * To get Youtube API Key: https://developers.google.com/youtube/v3/getting-started
   * Youtube Python Samples: https://github.com/hanhanwu/api-samples/tree/master/python
   * BTW, Google API sometimes looks confusing or too complex to me, if you want to see what does returned result look like, better just to print out the response result and check in JSON viewer: http://jsonviewer.stack.hu/
+  * Python pulp - for linear optimization
+    * General View: https://github.com/coin-or/pulp
+    * Documentation: https://pythonhosted.org/PuLP/
+  * Linear Optimization review: https://sites.math.washington.edu/~burke/crs/407/notes/section1.pdf
+    * To make it simple, that is, you define a goal and set some constraints, finally try to get as close to this goal as possbile, within the constraints. I think, this concept is also very philosophy
   * My code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/DEF_CON_video_list_linear_optimization.ipynb
 
 
