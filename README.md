@@ -36,6 +36,13 @@ play with social media and data mining
   * Linear Optimization review: https://sites.math.washington.edu/~burke/crs/407/notes/section1.pdf
     * To make it simple, that is, you define a goal and set some constraints, finally try to get as close to this goal as possbile, within the constraints. I think, this concept is also very philosophy
   * My code: https://github.com/hanhanwu/Hanhan_Play_With_Social_Media/blob/master/DEF_CON_video_list_linear_optimization.ipynb
+    * In this code, I went through the 5 steps in linear optimization:
+      * Define the problem: such as minimize or maximize. In my case, I want to minimize views/likes (my objective function)
+      * Create Decision Variables
+      * Define Onjective Function: This step is very interesting, you are using an interger to multiple the decision variable you created, not string (although they may look like strings)
+      * Set Constranits
+      * Optimization
+  * reference: https://www.analyticsvidhya.com/blog/2017/10/linear-optimization-in-python/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
 
 
 *********************************************
