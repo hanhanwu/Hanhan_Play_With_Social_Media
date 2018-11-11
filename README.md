@@ -2,6 +2,18 @@
 play with social media and data mining
 
 
+## Simple Solution Still Works
+Long time ago, I used multiple social media in Travel++ project, many solutions there are different from what you could see from official API pages, because the data collection methods here are just for data extraction without building an app. 2 years passed, today I tried official APIs again and my previous solutions again. Things that didn't work still do not work (official pages), things that wored still work but with much limitation (my old solutions)
+### Check Travel++ Project
+* https://github.com/hanhanwu/Hanhan-TravelPlusPlus
+  * In this project, I tried Twitter, Instagram, Flickr and Reddit
+### Problems in Official API Pages
+#### Instagram
+* If you don't want other user authentication, these won't return much result. Because after 2015 Nov. 17, if you build things in sandbox mode, then you need users to authenticate your access, even just to fetch media data or other public content. Only `tag_search()` doesn't need user authentication.
+  * This is Python Instagram API: https://github.com/facebookarchive/python-instagram
+  * This is Instagram API: https://www.instagram.com/developer/endpoints/media/
+
+
 <b>Semantic Web</b>
 
 * Microformats- Many website embed unified formats in the web, like those resume blocks in LinkedIn, small geo info in many websites like Wiki. This type of blocks have unified class name in HTML and they makes your data extraction life easier.
