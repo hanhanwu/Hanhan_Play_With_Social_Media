@@ -1,6 +1,9 @@
 # Hanhan_Play_With_Social_Media
 play with social media and data mining
 
+## New Supporting Tools
+* SFU Dataprep provides a connector to some public APIs which allows you to query the data faster: https://github.com/sfu-db/dataprep
+
 
 ## Simple Solution Still Works
 Long time ago, I used multiple social media in Travel++ project, many solutions there are different from what you could see from official API pages, because the data collection methods here are just for data extraction without building an app. 2 years passed, today I tried official APIs again and my previous solutions again. Things that didn't work still do not work (official pages), things that wored still work but with much limitation (my old solutions)
